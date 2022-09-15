@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sp-dashboard-client-side-solution",
+    "id": "ea09b693-34f6-4843-969e-607905bb3651",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "SP-Dashboard description"
+      },
+      "longDescription": {
+        "default": "SP-Dashboard description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "sp-dashboard Feature",
+        "description": "The feature that activates elements of the sp-dashboard solution.",
+        "id": "8406e67c-8870-4cdb-a2b5-cd6f33761114",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/sp-dashboard.sppkg"
+  }
+}
