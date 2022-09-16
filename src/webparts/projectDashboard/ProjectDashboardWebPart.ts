@@ -5,7 +5,7 @@ import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
-import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+import { BaseClientSideWebPart, WebPartContext } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
 import * as strings from 'ProjectDashboardWebPartStrings';
@@ -14,6 +14,7 @@ import { IProjectDashboardProps } from './components/IProjectDashboardProps';
 
 export interface IProjectDashboardWebPartProps {
   description: string;
+  context: WebPartContext;
 }
 
 export default class ProjectDashboardWebPart extends BaseClientSideWebPart<IProjectDashboardWebPartProps> {
@@ -29,7 +30,8 @@ export default class ProjectDashboardWebPart extends BaseClientSideWebPart<IProj
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        context: this.context
       }
     );
 
@@ -72,9 +74,9 @@ export default class ProjectDashboardWebPart extends BaseClientSideWebPart<IProj
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
-  protected get dataVersion(): Version {
-    return Version.parse('1.0');
-  }
+  // protected get dataVersion(): Version {
+  //   return Version.parse('1.0');
+  // }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {

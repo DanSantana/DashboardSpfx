@@ -1,11 +1,12 @@
 {
   "version": "0.2.0",
   "configurations": [
+
     {
       "name": "Hosted workbench",
       "type": "pwa-chrome",
       "request": "launch",
-      "url": "https://enter-your-SharePoint-site/_layouts/workbench.aspx",
+      "url": "https://1n1x2f.sharepoint.com/_layouts/workbench.aspx",
       "webRoot": "${workspaceRoot}",
       "sourceMaps": true,
       "sourceMapPathOverrides": {
